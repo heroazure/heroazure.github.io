@@ -1,35 +1,30 @@
-# heroxiao
-heroxiaoµÄ¸öÈË¼¼Êõ²©¿Í
-http://heroazure.github.io/heroxiao/
-¿ª·¢Ö¸µ¼ËµÃ÷
+# About
 
- ĞÂ½¨ÏîÄ¿Ò³Ãæ¿ª·¢
+This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
 
-°ÑgitÃüÁîĞĞ´ò¿ª£¬ÊäÈë´úÂë¡£
+You can visit [here](http://gaohaoyang.github.io) to see this blog.
 
-git clone git@github.com:heroazure/heroxiao.git
+---
 
-ÕâÊÇ°Ñ×Ô¼ºµÄ°æ±¾¿âÅª¹ıÀ´£¬×Ô¼ºÑ¡±¾µØÎ»ÖÃ¡£
+è¿™æ˜¯æˆ‘çš„åšå®¢ï¼ŒåŸºäº jekyllã€‚æˆ‘æ”¹äº†æ‰€æœ‰é»˜è®¤çš„æ ·å¼å’Œäº¤äº’ã€‚å¦‚æœä½ æƒ³ä½¿ç”¨è¿™ä¸ªåšå®¢æ¨¡æ¿ã€‚**è¯·å…ˆåœ¨è¿™ä¸ªä»“åº“ä¸Šç‚¹ä¸ªstarå§**ï¼Œè¿™ä¹Ÿæ˜¯å¯¹æˆ‘çš„è‚¯å®šå’Œé¼“åŠ±ï¼Œè°¢è°¢äº†ã€‚ç„¶åä½ å¯ä»¥å…‹éš†è¿™ä¸ªä»“åº“ç”¨ä½œä½ è‡ªå·±çš„åšå®¢ã€‚
 
-git checkout --orphan gh-pages
+åšå®¢è®¿é—®åœ°å€ï¼š[ç‚¹å‡»è¿™é‡Œ](http://gaohaoyang.github.io)
 
-´´½¨Ò»¸ö½Ğgh-pagesµÄ·ÖÖ§¡£ÎÒÃÇ»á°ÑÍøÕ¾µÄËùÓĞÎÄ¼ş¶¼·ÅÔÚÕâÀï¡£
+**ä½¿ç”¨æ—¶è¯·æ³¨æ˜æ¨¡æ¿æ¥æº:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-È»ºóÊÇÕâ¸ö¡£
+<!--
 
-git rm -rf .
+## è¢«å¼•ç”¨ä¿¡æ¯
 
-¼ÈÈ»ÊÇ·ÅÍøÕ¾µÄµØ·½£¬Ô­À´µÄÏîÄ¿ÎÄ¼ş¾Í²»ĞèÒªÁË¡£É¾µÄ¶¯×÷Ö»ÊÇÔÚÕâ¸ö·ÖÖ§Àï£¬ÏîÄ¿ÎÄ¼ş»á±£´æÔÚmaster·ÖÖ§ÖĞ¡£´´½¨Ò»¸öindex.htmlÎÄ¼ş£¬ÀïÃæËæ±ãĞ´µã¶«Î÷¡£
+ä½¿ç”¨äº†æˆ‘çš„æ¨¡æ¿å¹¶å†™æ˜æ¥æºçš„äººï¼š   
 
-git add index.html
-git commit -a -m "First pages commit"
+* [dreamholy](http://dreamholy.github.io/)
 
-git push origin gh-pages
+æ²¡æœ‰æ³¨æ˜æ¥æºçš„äººï¼š
 
--·ÖÖ§µü´ú¿ª·¢
+* [yangshuailing](http://yangshuailing.github.io/com/)
+* [huapu728](http://huapu728.github.io/)
+* [greatbuger](http://greatbuger.github.io/) 
 
-git status
-git add .
-git status .
-git commit -a -m "site"
-git push origin gh-pages
+
+-->
