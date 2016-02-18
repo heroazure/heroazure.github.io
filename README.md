@@ -1,10 +1,12 @@
-# Microdust 微尘
+# heroxiao Web前端工程师
 
 This is a blog created by Azeril. The blog is live at [azeril.me](http://azeril.me/).
+[借用Azeril的主题](https://github.com/Azeril/azeril.github.io)
+[最原始主题](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll)
+[bootstrap主题模板](http://startbootstrap.com/)
+## 鸣谢
 
-## Thanks
-
-The blog used many tool/service,many thanks to:
+该博客用到了许多工具/服务，非常感谢:
 
 * [Github](https://github.com/), all the data based on;
 * [Git](https://git-scm.com/), blogs and code files version control system;
@@ -16,11 +18,9 @@ The blog used many tool/service,many thanks to:
 * [Google](http://google.com), the one who tell me how to make it.
 * …
 
-## How To Creat A Jekyll Blog
+## 如何创建 Jekyll Blog
 
-[Build-Your-First-GitHub-Pages-Blog](http://azeril.me/blog/Build-Your-First-GitHub-Pages-Blog.html)
+[创建你的第一个github pages博客](http://azeril.me/blog/Build-Your-First-GitHub-Pages-Blog.html)
+[一步步在GitHub上创建博客主页](http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html)
 
-Build your blog Step by step
-## Just write
-
-Start writing now！
+## Just write now！
