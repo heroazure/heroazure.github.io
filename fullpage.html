@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>fullpage最佳实践</title>
     <link rel="stylesheet" href="stylesheets/normalize.css"/>
@@ -33,8 +33,12 @@
 <body>
 <div id="fullpage">
     <div class="section" id="section0">
-        <div class="container">
-
+        <div class="container page-first">
+            <div class="block-space"></div>
+            <img src="img/page0.png" alt="logo"/>
+            <a href="#secondPage" class="icon-down">
+                <i class="fa fa-angle-down animate1"></i>
+            </a>
         </div>
     </div>
     <div class="section" id="section1">
@@ -63,10 +67,15 @@
                                 <!--打造一个翡翠玉石艺术品的跳蚤市场和批发平台以及最权威的翡翠玉石交易平台-->
                             </p>
                         </div>
-                        <img src="img/img1.jpg" alt="图片"/>
+                        <img src="img/pic1.png" alt="图片"/>
                     </div>
                     <div class="pane-more">
-                        more>>
+                        <div class="txt2">more</div>
+                        <div class="icon2">
+                            <div class="circle">
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="page-pane pane-second">
@@ -79,10 +88,15 @@
                                 哇宝科技亮相全球首届互联网金融大会
                             </p>
                         </div>
-                        <img src="img/img1.jpg" alt="图片"/>
+                        <img src="img/pic2.png" alt="图片"/>
                     </div>
                     <div class="pane-more">
-                        more>>
+                        <div class="txt2">more</div>
+                        <div class="icon2">
+                            <div class="circle">
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="page-pane pane-third">
@@ -95,10 +109,15 @@
                                 哇宝以互联网运营模式对玉石艺术品进行市场的产业升级，通过‘专业化，品牌化，大众化’的文化科技产业市场运营理念
                             </p>
                         </div>
-                        <img src="img/img1.jpg" alt="图片"/>
+                        <img src="img/pic3.png" alt="图片"/>
                     </div>
                     <div class="pane-more">
-                        more>>
+                        <div class="txt2">more</div>
+                        <div class="icon2">
+                            <div class="circle">
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="page-pane pane-forth">
@@ -107,10 +126,15 @@
                             <h3>人人都有传家宝！</h3>
                             <h5>everyone has a family heirloom!</h5>
                         </div>
-                        <img src="img/img1.jpg" alt="图片"/>
+                        <img src="img/pic4.png" alt="图片"/>
                     </div>
                     <div class="pane-more">
-                        more>>
+                        <div class="txt2">more</div>
+                        <div class="icon2">
+                            <div class="circle">
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,27 +154,101 @@
                     <hr/>
                 </div>
             </div>
-            <div class="page-content">
+            <div class="hire-content clearfix">
                 <div class="col-2">
-                    <div class="hire-pane"></div>
+                    <div class="hire-pane">
+                        <img src="img/hire0.png" alt="hire"/>
+                        <div class="hire-desc">
+                            <div class="h5">岗位</div>
+                            <ul class="list-unstyled">
+                                <li>1 php高级开发工程师</li>
+                                <li>2 php开发工程师</li>
+                                <li>3 前端工程师</li>
+                                <li>4 web前端(移动端)</li>
+                                <li>5 高级运维工程师</li>
+                            </ul>
+                        </div>
+                        <div class="hire-more">
+                            more
+                            <br/>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-2">
-                    <div class="hire-pane"></div>
+                    <div class="hire-pane">
+                        <img src="img/hire1.png" alt="hire"/>
+                        <div class="hire-desc">
+                            <div class="h5">岗位</div>
+                            <ul class="list-unstyled">
+                                <li>1 产品经理</li>
+                                <li>2 产品运维</li>
+                            </ul>
+                        </div>
+                        <div class="hire-more">
+                            more
+                            <br/>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-2">
-                    <div class="hire-pane"></div>
+                    <div class="hire-pane">
+                        <img src="img/hire2.png" alt="hire"/>
+                        <div class="hire-desc">
+                            <div class="h5">岗位</div>
+                            <ul class="list-unstyled">
+                                <li>1 交互设计师</li>
+                                <li>2 平面设计师</li>
+                                <li>3 视觉设计师</li>
+                            </ul>
+                        </div>
+                        <div class="hire-more">
+                            more
+                            <br/>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-2">
-                    <div class="hire-pane"></div>
+                    <div class="hire-pane">
+                        <img src="img/hire3.png" alt="hire"/>
+                        <div class="hire-desc">
+                            <div class="h5">岗位</div>
+                            <ul class="list-unstyled">
+                                <li>1 市场专员</li>
+                                <li>2 商务专员</li>
+                            </ul>
+                        </div>
+                        <div class="hire-more">
+                            more
+                            <br/>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-2">
-                    <div class="hire-pane"></div>
+                    <div class="hire-pane">
+                        <img src="img/hire4.png" alt="hire"/>
+                        <div class="hire-desc">
+                            <div class="h5">岗位</div>
+                            <ul class="list-unstyled">
+                                <li>1 新媒体运营</li>
+                                <li>2 文案编辑</li>
+                            </ul>
+                        </div>
+                        <div class="hire-more">
+                            more
+                            <br/>
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="section" id="section3">
-        <div class="page-header">
+        <div class="page-header contact-header">
             <div class="line">
                 <hr/>
             </div>
@@ -166,20 +264,29 @@
             <div class="contact-info">
                 <div class="txt1">
                     <h4>联系方式</h4>
-
-                    <p>电话：0571-88157555</p>
-
-                    <p>邮箱：hr@waboon.com</p>
-
-                    <p>地址：杭州市西湖区古荡街道西溪新座5幢2楼</p>
-
-                    <p>邮编：310000</p>
+                    <ul class="list-unstyled">
+                        <li>电话：0571-88157555</li>
+                        <li>邮箱：hr@waboon.com</li>
+                        <li>地址：杭州市西湖区古荡街道西溪新座5幢2楼</li>
+                        <li>邮编：310000</li>
+                    </ul>
                 </div>
             </div>
-            <div class="contact-code"></div>
+            <div class="contact-code">
+                <h4>微信扫一扫:</h4>
+                <div class="code-imgs clearfix">
+                    <div class="code1">
+                        <img src="img/code1.png" alt="微信服务号"/>
+                        <div>微信服务号</div>
+                    </div>
+                    <div class="code2">
+                        <img src="img/code2.png" alt="微信订阅号"/>
+                        <div>微信订阅号</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="map">
-
         </div>
         <div class="footer">
             <div class="table-cell">
