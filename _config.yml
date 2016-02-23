@@ -1,10 +1,10 @@
 # Site settings
-title: Microdust
+title: heroxiao前端
 header-img: "img/autumn2.jpg"
-tagline: "吉光片羽"  
+tagline: ""
 description: "在遙遠的地方 一切虔誠終必相遇"  
 baseurl: ""
-url: "http://azeril.me"  
+#url: "http://azeril.me"
 #url: "http://localhost:4000"
 host:             0.0.0.0
 port:             9002
@@ -12,20 +12,15 @@ encoding:         UTF-8
 
 # About/contact
 owner: 
-  name: "Azeril"
-  email: azeril@live.cn
-  bio: "明朝即長路 惜取此時心"
+  name: "heroxiao"
+  email: heroxiao73@outlook.com
+  bio: ""
 
 # Data
 gavatar: http://dreamofbook.qiniudn.com/Az..png
 favicon: img/favicon.ico
 
-douban_username: Azeril
-twitter_username: Azeril_Lapland  
-github_username: Azeril  
-facebook_username: Azeril_Lapland  
-weibo_username: Azeril  
-zhihu_username: Azeril  
+github_username: heroazure
 
 # Build settings  
 # use Github Flavored Markdown !important  
@@ -33,7 +28,7 @@ zhihu_username: Azeril
 markdown: kramdown
 kramdown:
   input: GFM
-highlighter: pygments
+highlighter: rouge
 
 gems: [jekyll-paginate]
 permalink: none
@@ -41,7 +36,7 @@ paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","Final-Cut-Pro-X-Shortcuts.md"]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: Asia/Shanghai
+timezone: heroxiao/杭州
 
 # Title
 
@@ -54,16 +49,16 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Azeril"
+      author: "heroxiao"
       header-img: "img/fantasy.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : Azeril
+    short_name : heroxiao
   disqus :
-      short_name : Azeril
+      short_name : heroxiao
 
 # Analytics and webmaster tools stuff goes here
 google_analytics: UA-66863061-1
