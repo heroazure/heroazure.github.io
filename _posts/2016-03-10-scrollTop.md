@@ -16,6 +16,11 @@ description: 获取浏览器滚动条距离顶端的距离收集
         { scrollPos = document.documentElement.scrollTop; }
         else if (document.body) { scrollPos = document.body.scrollTop; }
         return scrollPos;
+
+        /*var scrollTop = window.pageYOffset
+              || document.documentElement.scrollTop
+              || document.body.scrollTop
+              || 0;*/
 }`
 
 ## jQuery获取滚动条距离顶端的距离
