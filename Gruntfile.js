@@ -1,59 +1,139 @@
+'use strict';
+
 module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        // Metadata.
         pkg: grunt.file.readJSON('package.json'),
+        banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
+        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+        ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+        // Task configuration.
+        clean: {
+            files: ['temp']
+        },
+        concat: {
+            options: {
+                banner: '<%= banner %>',
+                stripBanners: true
+            }
+        },
         uglify: {
-            main: {
-                src: 'js/<%= pkg.name %>.js',
-                dest: 'js/<%= pkg.name %>.min.js'
+            options: {
+                banner: '<%= banner %>',
+                mangle: {
+                    except: ['require', 'exports', 'module']
+                }
+            },
+            ug:{
+                files: [
+                    {
+                        expand: true,
+                        cwd: "develop/js/",
+                        src: ["**/*.js","!plugin/**/*"],
+                        dest: "public/js/",
+                        ext: ".min.js"
+                    }]
+            }
+        },
+        qunit: {
+            files: ['views/**/*.html','*.html']
+        },
+        jshint: {
+            options: {
+                //jshintrc: true
+                "asi":true,
+                "globals": {
+                    "$": false,
+                    "jQuery": false
+                }
+            },
+            gruntfile: {
+                src: 'Gruntfile.js'
+            },
+            src: {
+                src: ['js/**/*.js']
             }
         },
         less: {
-            expanded: {
-                options: {
-                    paths: ["css"]
-                },
-                files: {
-                    "css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
-                }
+            development: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "develop/less/",
+                        src: ["page/*.less", "{normalize,common,main}.less"],
+                        dest: "public/css/dev",
+                        ext: ".css"
+                    }]
             },
-            minified: {
+            production: {
                 options: {
-                    paths: ["css"],
-                    cleancss: true
+                    compress: true
                 },
-                files: {
-                    "css/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
-                }
+                files: [
+                    {
+                        expand: true,
+                        cwd: "develop/less/",
+                        src: ["page/*.less", "{normalize,common,main}.less"],
+                        dest: "public/css/pub",
+                        ext: ".min.css"
+                    }]
             }
         },
-        banner: '/*!\n' +
-            ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
-            ' */\n',
-        usebanner: {
-            dist: {
-                options: {
-                    position: 'top',
-                    banner: '<%= banner %>'
-                },
-                files: {
-                    src: ['css/<%= pkg.name %>.css', 'css/<%= pkg.name %>.min.css', 'js/<%= pkg.name %>.min.js']
-                }
+        imagemin: {
+            dynamic: {                         // Another target
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'develop/img/',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: 'public/img/'                  // Destination path prefix
+                }]
+            }
+        },
+        copy:{
+            vendor: {                         // Another target
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'develop/vendor/',                   // Src matches are relative to this path
+                    src: ['**/*'],   // Actual patterns to match
+                    dest: 'public/vendor/'                  // Destination path prefix
+                }]
+            },
+            fonts: {                         // Another target
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'develop/fonts/',                   // Src matches are relative to this path
+                    src: ['**/*'],   // Actual patterns to match
+                    dest: 'public/fonts/'                  // Destination path prefix
+                }]
+            },
+            plugin: {                         // Another target
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'develop/js/plugin/',                   // Src matches are relative to this path
+                    src: ['**/*'],   // Actual patterns to match
+                    dest: 'public/js/plugin/'                  // Destination path prefix
+                }]
             }
         },
         watch: {
-            scripts: {
-                files: ['js/<%= pkg.name %>.js'],
-                tasks: ['uglify'],
-                options: {
-                    spawn: false
-                }
-            },
+            /*gruntfile: {
+             files: '<%= jshint.gruntfile.src %>',
+             tasks: ['jshint:gruntfile']
+             },
+             src: {
+             files: '<%= jshint.src.src %>',
+             tasks: ['jshint:src', 'qunit']
+             },*/
+            /*test: {
+             files: '<%= jshint.test.src %>',
+             tasks: ['jshint:test', 'qunit']
+             }*/
             less: {
-                files: ['less/*.less'],
+                files: ['develop/less/**/*.less'],
                 tasks: ['less'],
                 options: {
                     spawn: false
@@ -62,13 +142,21 @@ module.exports = function(grunt) {
         }
     });
 
-    // Load the plugins.
+    // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    //grunt.loadNpmTasks('grunt-contrib-qunit');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-banner');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-cmd-transport');
 
-    // Default task(s).
-    grunt.registerTask('default', ['uglify', 'less', 'usebanner']);
+    // Default task.
+    grunt.registerTask('default', ['less','uglify','copy']);
+
+    grunt.registerTask('test', ['jshint', 'qunit', 'clean', 'concat','less', 'uglify']);
 
 };

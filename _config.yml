@@ -2,7 +2,7 @@
 title: heroxiao个人前端博客
 header-img: "img/autumn2.jpg"
 tagline: ""
-description: "没有钱，你拿什么来维持你的亲情，稳定你的爱情，联络你的友情，靠嘴吗？别闹了，大家都挺忙的"
+description: "一念放下,万般自在"
 baseurl: ""
 #url: "http://azeril.me"
 #url: "http://localhost:4000"
@@ -33,7 +33,7 @@ highlighter: rouge
 gems: [jekyll-paginate]
 permalink: none
 paginate: 8
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","Final-Cut-Pro-X-Shortcuts.md"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md",'develop','.jshintrc','images']
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: heroxiao/杭州
