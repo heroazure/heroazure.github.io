@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Reading"
+title: "阅读"
 description: "悦读·又一年"
 header-img: "img/sky2.jpg"
 ---
