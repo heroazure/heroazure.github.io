@@ -6,6 +6,17 @@
   z-index: 3;
   background: #202F38;
   font-family: @font-family-zhongwen;
+  border-color: transparent;
+  .navbar-collapse{
+    border-color: transparent;
+  }
+  .navbar-toggle{
+    border-color: lighten(#202F38, 50%);
+    &:hover,
+    &:focus{
+      background-color: lighten(#202F38, 40%);
+    }
+  }
   .navbar-brand {
     font-weight: 800;
   }
